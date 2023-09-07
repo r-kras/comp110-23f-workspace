@@ -1,4 +1,4 @@
-"""EX01- Chardle - the game Wordle without visuals"""
+"""EX01- Chardle - the game Wordle without visuals."""
 
 __author__ = "730699792"
 
@@ -17,31 +17,33 @@ if (len(user_guess) != 1):
     exit()
 
 # Initialize a count variable
-char_count: int = 0;
+char_count: int = 0
 print("Searching for " + user_guess + " in " + user_word)
 # If character found at the first space
-if(user_word[0] == user_guess):
+if (user_word[0] == user_guess):
     print(user_guess + " found at index 0")
     char_count += 1
 # If character found at the second space
-if(user_word[1] == user_guess):
+if (user_word[1] == user_guess):
     print(user_guess + " found at index 1")
     char_count += 1
 # If character found at the third space
-if(user_word[2] == user_guess):
+if (user_word[2] == user_guess):
     print(user_guess + " found at index 2")
     char_count += 1
 # If character found at the fourth space
-if(user_word[3] == user_guess):
+if (user_word[3] == user_guess):
     print(user_guess + " found at index 3")
     char_count += 1
 # If character found at the fifth space
-if(user_word[4] == user_guess):
+if (user_word[4] == user_guess):
     print(user_guess + " found at index 4")
     char_count += 1
 
 # Print out number found
 if (char_count == 0):
     print("No instances of " + user_guess + " found in " + user_word)
+elif (char_count == 1): 
+    print("1 instance of " + user_guess + " found in " + user_word)
 else: 
     print(str(char_count) + " instances of " + user_guess + " found in " + user_word)
