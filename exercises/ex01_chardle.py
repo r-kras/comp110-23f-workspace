@@ -2,7 +2,6 @@
 
 __author__ = "730699792"
 
-
 # Recieve 5-letter word from user
 user_word: str = input("Enter a 5-character word: ")
 # If word is not 5 letters, end the program
