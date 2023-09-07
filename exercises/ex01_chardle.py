@@ -1,23 +1,5 @@
 """EX01- Chardle - the game Wordle without visuals"""
 
-"""
-Checklist:
-- Prompting for Inputs
-    *Must be exact according to the EX
-- Checking Indices for Matches
-    *No loops
-- Counting Matching Indices
-- Exiting Early for Invalid Inputs
-    *Use 'exit()'
-- Style and Documentation Requirements
-    *snake case
-    *descriptive variable names
-- Type Safety and Linting
-    *are you using typed variables appropriately
-    *no errors present
-"""
-#Remember to backup!
-
 __author__ = "730699792"
 
 
