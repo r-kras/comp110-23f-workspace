@@ -29,11 +29,11 @@ while (i < secret_word_length):
         box_string += GREEN_BOX
     else:
 
-    # if character is not same pos...
-    # see if its present somewhere in secret
+        # if character is not same pos...
+        # see if its present somewhere in secret
         in_secret: bool = False
         j: int = (i + 1) % secret_word_length
-        while ((in_secret == False) and j != i):
+        while (j != i):
             if (secret_word[j] == guess[i]):
                 in_secret = True
             j = (j + 1) % secret_word_length
