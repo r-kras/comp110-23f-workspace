@@ -16,7 +16,7 @@ def contains_char(searched_word: str, target_letter: str) -> bool:
     in_secret: bool = False
     j: int = 0
     # iterate through characters of word
-    while (j != len(searched_word) and in_secret == False):
+    while ((j != len(searched_word)) == True and in_secret == False):
         # if letter is found in word, set equal to true
         if (searched_word[j] == target_letter):
             in_secret = True
@@ -47,7 +47,7 @@ def emojified(user_guess: str, secret_word: str) -> str:
         if (secret_word[i] == user_guess[i]):
             box_string += GREEN_BOX
         elif (contains_char(secret_word, user_guess[i])):
-        # if char is present somewhere: add yellow
+            # if char is present somewhere: add yellow
             box_string += YELLOW_BOX
         # if not present anywhere: add white
         else:
@@ -56,6 +56,7 @@ def emojified(user_guess: str, secret_word: str) -> str:
 
     # return the string of colored boxes
     return box_string
+
 
 def input_guess(string_length: int) -> str:
     """Taking a user input with a specified length.
@@ -69,6 +70,7 @@ def input_guess(string_length: int) -> str:
     while (len(user_guess) != string_length):
         user_guess = input(f"That was not {string_length} chars! Try again: ")
     return user_guess
+    assert False
 
 
 def main() -> None:
