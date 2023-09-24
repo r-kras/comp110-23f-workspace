@@ -4,8 +4,12 @@ __author__ = "730699792"
 
 
 def contains_char(searched_word: str, target_letter: str) -> bool:
-    """A function to determine if a character is present in a string."""
+    """A function to determine if a character is present in a string.
     
+    Keyword parameters:
+    searched_word -- the string being searched
+    target_letter -- the character to be found
+    """
     # raise assertion error if target_letter is not a single character
     assert len(target_letter) == 1
     # assume character is not in word
@@ -21,11 +25,12 @@ def contains_char(searched_word: str, target_letter: str) -> bool:
 
 
 def emojified(user_guess: str, secret_word: str) -> str:
+    """Returns a string of emojis corresponding to similar characters between both strings.
+
+    Keyword Parameters:
+    user_guess -- the string guessed that will be iterated through
+    secret_word -- the set word that will be used for comparison
     """
-    Determining the similar characters between two strings
-    and printing them as colored box emojis.
-    """
-    
     # throw assertion error is the lengths of the inputs are not equal
     assert len(user_guess) == len(secret_word)
     # empty string for colored boxes
@@ -53,11 +58,11 @@ def emojified(user_guess: str, secret_word: str) -> str:
     return box_string
 
 def input_guess(string_length: int) -> str:
+    """Taking a user input with a specified length.
+
+    Keyword parameters:
+    string_length -- the desired length of the input
     """
-    A function taking an input string of a specific length
-    and retaking user input until it is the specified length.
-    """
-    
     assert string_length > 0
     # take in user input
     user_guess: str = input(f"Enter a {string_length} character word: ")
@@ -69,7 +74,6 @@ def input_guess(string_length: int) -> str:
 
 def main() -> None:
     """The entrypoint of the program and the main game loop."""
-    
     # choose secret word
     # user's guess of the secret word
     # current turn counter
