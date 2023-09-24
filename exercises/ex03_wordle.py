@@ -71,6 +71,7 @@ def input_guess(string_length: int) -> str:
         user_guess = input(f"That wasn't {string_length} chars! Try again: ")
     return user_guess
 
+
 def main() -> None:
     """The entrypoint of the program and the main game loop."""
     # choose secret word
