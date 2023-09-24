@@ -63,7 +63,6 @@ def input_guess(string_length: int) -> str:
     Keyword parameters:
     string_length -- the desired length of the input
     """
-    assert string_length > 0
     # take in user input
     user_guess: str = input(f"Enter a {string_length} character word: ")
     # redo user_guess until it is length 6
