@@ -2,19 +2,32 @@
 
 __author__ = "730699792"
 
+
 def contains_char(searched_word: str, target_letter: str) -> bool:
     """A function to determine if a character is present in a string."""
+    
+    # raise assertion error if target_letter is not a single character
+    assert len(target_letter) == 1
+    # assume character is not in word
     in_secret: bool = False
     j: int = 0
-    while (j != len(searched_word)):
+    # iterate through characters of word
+    while (j != len(searched_word) and in_secret == False):
+        # if letter is found in word, set equal to true
         if (searched_word[j] == target_letter):
             in_secret = True
         j = j + 1
     return in_secret
 
+
 def emojified(user_guess: str, secret_word: str) -> str:
-    """Determining the similar characters between two strings
-    and printing them as colored box emojis."""
+    """
+    Determining the similar characters between two strings
+    and printing them as colored box emojis.
+    """
+    
+    # throw assertion error is the lengths of the inputs are not equal
+    assert len(user_guess) == len(secret_word)
     # empty string for colored boxes
     box_string: str = ""
     # box emojis
@@ -40,8 +53,12 @@ def emojified(user_guess: str, secret_word: str) -> str:
     return box_string
 
 def input_guess(string_length: int) -> str:
-    """A function taking an input string of a specific length
-    and retaking user input until it is the specified length."""
+    """
+    A function taking an input string of a specific length
+    and retaking user input until it is the specified length.
+    """
+    
+    assert string_length > 0
     # take in user input
     user_guess: str = input(f"Enter a {string_length} character word: ")
     # redo user_guess until it is length 6
@@ -52,6 +69,7 @@ def input_guess(string_length: int) -> str:
 
 def main() -> None:
     """The entrypoint of the program and the main game loop."""
+    
     # choose secret word
     # user's guess of the secret word
     # current turn counter
