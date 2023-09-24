@@ -16,7 +16,7 @@ def contains_char(searched_word: str, target_letter: str) -> bool:
     in_secret: bool = False
     j: int = 0
     # iterate through characters of word
-    while ((j != len(searched_word)) == True and in_secret == False):
+    while (j != len(searched_word)):
         # if letter is found in word, set equal to true
         if (searched_word[j] == target_letter):
             in_secret = True
@@ -68,10 +68,8 @@ def input_guess(string_length: int) -> str:
     user_guess: str = input(f"Enter a {string_length} character word: ")
     # redo user_guess until it is length 6
     while (len(user_guess) != string_length):
-        user_guess = input(f"That was not {string_length} chars! Try again: ")
+        user_guess = input(f"That wasn't {string_length} chars! Try again: ")
     return user_guess
-    assert False
-
 
 def main() -> None:
     """The entrypoint of the program and the main game loop."""
