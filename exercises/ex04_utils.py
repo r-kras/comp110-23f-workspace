@@ -46,4 +46,6 @@ def is_equal(array1: list[int], array2: list[int]) -> bool:
             return False
         i = i + 1
     # if exited while loop, without returning, return true
-    return True
+    return False
+
+print(is_equal([1,1,1],[1,1]))
