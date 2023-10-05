@@ -15,7 +15,8 @@ def all(array: list[int], target: int) -> bool:
             return False
         i = i + 1
     # if exited while loop, without returning, return true
-    return True
+    if (i == len(array)):
+        return True
 
 
 def max(array: list[int]) -> int:
@@ -46,10 +47,6 @@ def is_equal(array1: list[int], array2: list[int]) -> bool:
         if (array1[i] != array2[i]):
             return False
         i = i + 1
+    if (i == len(array1) or i == len(array1)):
     # if exited while loop, without returning, return true
-    return True
-
-print(all([], 1))
-print(is_equal([1,1,1], [1,1]))
-print(is_equal([1,2], [1]))
-print(is_equal([], [1]))
+        return True
