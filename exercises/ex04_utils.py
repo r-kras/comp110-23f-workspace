@@ -7,12 +7,10 @@ def all(array: list[int], target: int) -> bool:
     """Determines if all array is all the target element."""
     # counter for while loop
     i: int = 0
-    # iterate through array
-    
+    # iterate through array    
     while (i < len(array)):
         # if a number different than target is found, return false
         if (array[i] != target):
-            print(f"check\n{array}  {target}  {array[i]}")
             return False
         i = i + 1
     # if exited while loop, without returning, return true
@@ -45,8 +43,8 @@ def is_equal(array1: list[int], array2: list[int]) -> bool:
     while (i < len(array1) and i < len(array2)):
         # if two elements are not equal, return false
         if (array1[i] != array2[i]):
-            print(f"check\n{array}  {target}  {array[i]}")
-            return False
+            print(check)
+            #return False
         i = i + 1
     # if exited while loop, without returning, return true
     return True
