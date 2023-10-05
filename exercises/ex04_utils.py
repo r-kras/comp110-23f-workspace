@@ -43,7 +43,7 @@ def is_equal(array1: list[int], array2: list[int]) -> bool:
     while (i < len(array1) and i < len(array2)):
         # if two elements are not equal, return false
         if (array1[i] != array2[i]):
-            print("check")
+            print(f"{array1}   {array2}   {i}")
             #return False
         i = i + 1
     # if exited while loop, without returning, return true
