@@ -5,6 +5,9 @@ __author__ = "730699792"
 
 def all(array: list[int], target: int) -> bool:
     """Determines if all array is all the target element."""
+    # if array is empty, return false
+    if (len(array) == 0):
+        return False
     # counter for while loop
     i: int = 0
     # iterate through array    
@@ -37,14 +40,16 @@ def max(array: list[int]) -> int:
 
 def is_equal(array1: list[int], array2: list[int]) -> bool:
     """Determines if two arrays are identical."""
+    # if arrays are different lenghts, return false
+    if (len(array1) != len(array2)):
+        return False
     # initialize a counter 
     i: int = 0
     # while the end of each array has not been reached
     while (i < len(array1) and i < len(array2)):
         # if two elements are not equal, return false
         if (array1[i] != array2[i]):
-            print(f"{array1}   {array2}   {i}")
-            #return False
+            return False
         i = i + 1
     # if exited while loop, without returning, return true
-    return False
+    return True
