@@ -8,6 +8,7 @@ def all(array: list[int], target: int) -> bool:
     # counter for while loop
     i: int = 0
     # iterate through array
+    
     while (i < len(array)):
         # if a number different than target is found, return false
         if (array[i] != target):
@@ -48,4 +49,7 @@ def is_equal(array1: list[int], array2: list[int]) -> bool:
     # if exited while loop, without returning, return true
     return True
 
-print(is_equal([1,1,1],[1,1]))
+print(all([], 1))
+print(is_equal([1,1,1], [1,1]))
+print(is_equal([1,2], [1]))
+print(is_equal([], [1]))
