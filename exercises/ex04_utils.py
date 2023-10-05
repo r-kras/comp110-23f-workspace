@@ -9,7 +9,7 @@ def all(array: list[int], target: int) -> bool:
     i: int = 0
     # iterate through array
     while (i < len(array)):
-    # if a number different than target is found, return false
+        # if a number different than target is found, return false
         if (array[i] != target):
             return False
         i = i + 1
@@ -37,11 +37,13 @@ def max(array: list[int]) -> int:
 
 def is_equal(array1: list[int], array2: list[int]) -> bool:
     """Determines if two arrays are identical."""
+    # initialize a counter 
     i: int = 0
-    j: int = 0
-    while (i < len(array1) and j < len(array2)):
-        if (array1[i] != array2[j]):
+    # while the end of each array has not been reached
+    while (i < len(array1) and i < len(array2)):
+        # if two elements are not equal, return false
+        if (array1[i] != array2[i]):
             return False
         i = i + 1
-        j = j + 1
+    # if exited while loop, without returning, return true
     return True
