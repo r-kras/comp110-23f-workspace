@@ -12,11 +12,11 @@ def all(array: list[int], target: int) -> bool:
     while (i < len(array)):
         # if a number different than target is found, return false
         if (array[i] != target):
+            print(f"check\n{array}  {target}  {array[i]}")
             return False
         i = i + 1
     # if exited while loop, without returning, return true
-    if (i == len(array)):
-        return True
+    return True
 
 
 def max(array: list[int]) -> int:
@@ -45,8 +45,8 @@ def is_equal(array1: list[int], array2: list[int]) -> bool:
     while (i < len(array1) and i < len(array2)):
         # if two elements are not equal, return false
         if (array1[i] != array2[i]):
+            print(f"check\n{array}  {target}  {array[i]}")
             return False
         i = i + 1
-    if (i == len(array1) or i == len(array1)):
     # if exited while loop, without returning, return true
-        return True
+    return True
