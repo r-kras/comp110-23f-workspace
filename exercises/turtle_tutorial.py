@@ -53,8 +53,8 @@ def triangle_fill(side_length: float) -> None:
 
 
 def mini_project() -> None:
-    """Mini Project: Cascacading"""
-    side_length: float  = 100.0
+    """Mini Project: Cascacading Triangles."""
+    side_length: float = 100.0
     
     # create an initial triangle
     triangle_fill(side_length)
