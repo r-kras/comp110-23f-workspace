@@ -1,6 +1,7 @@
-"""Summing the elements of a list using different loops"""
+"""Summing the elements of a list using different loops."""
 
 __author__ = "730699792"
+
 
 def w_sum(vals: list[float]) -> float:
     """Finding the sum of a list using a while loop."""
@@ -32,7 +33,7 @@ def f_range_sum(vals: list[float]) -> float:
     # output - storing the total sum being returned
     output: float = 0
     # Iterate through vals
-    for index in range(0,len(vals)):
+    for index in range(0, len(vals)):
         # add value at current index to output
         output += vals[index]
     return output
