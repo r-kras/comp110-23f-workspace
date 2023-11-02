@@ -1,9 +1,10 @@
 """The various functions used in ex06."""
 __author__ = "730699792"
 
+
 def invert(input_dict: dict[str, str]) -> dict[str, str]:
     """Inverting the keys and values of a dict."""
-    output_dict : dict[str, str] = {}
+    output_dict: dict[str, str] = {}
     # iterate through input dictionary's keys
     for key in input_dict:
         # if value already a key raise key error
@@ -13,7 +14,6 @@ def invert(input_dict: dict[str, str]) -> dict[str, str]:
         output_dict[input_dict[key]] = key
     # return output dict
     return output_dict
-#print(invert({"a": "z", "b": "y", "c": "z"}))
 
 
 def favorite_color(names_and_colors: dict[str, str]) -> str:
@@ -34,13 +34,12 @@ def favorite_color(names_and_colors: dict[str, str]) -> str:
             max_color = color
             max_value = color_scores[color]
     return max_color
-#print(favorite_color({"Jane": "Blue", "John": "Red", "Jack": "Blue"}))
 
 
 def count(input_list: list[str]) -> dict[str, int]:
     """Counts occurances of a value in a list."""
     # initialize empty dict
-    output_dict: dict[str,int] = {}
+    output_dict: dict[str, int] = {}
     # iterate through values in input_list
     for key in input_list:
         # if value is present, increment
@@ -53,9 +52,7 @@ def count(input_list: list[str]) -> dict[str, int]:
 
 
 def alphabetizer(input_list: list[str]) -> dict[str, list[str]]:
-    """Given a list of strings, sorts the strings based on their first letter"""
-    # sort the input list
-
+    """Given a list of strings, sorts the strings based on their first letter."""
     # add each element to dict
     output_dict: dict[str, list[str]] = {}
     for element in input_list:
