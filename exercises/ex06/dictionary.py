@@ -22,10 +22,10 @@ def favorite_color(names_and_colors: dict[str, str]) -> str:
     
     # find occurances of color by iterating through the names
     for name in names_and_colors:
-        if names_and_colors[name] in color_scores:
-            color_scores[names_and_colors[name]] += 1
+        if names_and_colors[name].lower() in color_scores:
+            color_scores[names_and_colors[name].lower()] += 1
         else: 
-            color_scores[names_and_colors[name]] = 1
+            color_scores[names_and_colors[name].lower()] = 1
     # find the max by iterating through colors
     max_color: str = ""
     max_value: int = -1
@@ -67,8 +67,13 @@ def alphabetizer(input_list: list[str]) -> dict[str, list[str]]:
 def update_attendance(input_dict: dict[str, list[str]], day: str, name: str) -> dict[str, list[str]]:
     """Adding or creating elements in an attendance sheet."""
     # if day started, add name to list
+    if name == "" or day == "":
+        return input_dict
     if day in input_dict:
-        input_dict[day].append(name)
+        if name in input_dict[day]:
+            pass
+        else:
+            input_dict[day].append(name)
     # if day not started, start with given name
     else:
         input_dict[day] = [name]
