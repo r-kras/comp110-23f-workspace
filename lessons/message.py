@@ -23,5 +23,5 @@ class Message:
         
 
 msg: Message = Message("Erin", "Great Job!", False)
-# msg * 100
+#msg * 100
 print(msg)
